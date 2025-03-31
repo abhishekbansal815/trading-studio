@@ -1,54 +1,131 @@
-# React + TypeScript + Vite
+````markdown
+# TradeStudio Trading Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+TradeStudio is an online platform for building, simulating, and analyzing trading strategies. Built with React + TypeScript, it demonstrates core trading platform functionalities while emphasizing code quality and user experience.
 
-## Expanding the ESLint configuration
+## Implemented Workflows
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Strategy Builder**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+   - Create nested AND/OR rules for Scanner/Buy/Sell steps
+   - Visual rule configuration interface
+   - Save/load strategy functionality
+
+2. **Simulation Dashboard**
+   - Basic progress tracking
+   - Performance metrics display (returns, win rate)
+   - Historical order visualization
+
+## Project Setup
+
+### Prerequisites
+
+- Node.js (v18+)
+- npm (v9+)
+
+### Installation
+
+```bash
+git clone https://github.com/abhishekbansal815/trading-studio.git
+cd trading-studio
+npm install
+npm run dev
+```
+````
+
+## Project Structure
+
+```
+trading-studio/
+├── public/              # Static assets and index.html (includes Normalize.css for cross-browser consistency)
+├── src/
+│   ├── assets/          # Images, icons, fonts
+│   ├── components/      # Reusable UI components
+│   │   ├── Header/      # Header component and styles
+│   │   ├── Pricing/     # Pricing component and styles
+│   │   ├── Simulator/   # Simulator component and styles
+│   │   └── StrategyBuilder/  # Strategy Builder component and styles
+│   ├── pages/           # Page components (Home, CreateStrategy, Simulator, FAQ)
+│   ├── index.css        # Global CSS (includes Normalize.css)
+│   ├── App.tsx          # Main application component with routing
+│   └── main.tsx         # Entry point
+├── tests/               # Test files for components and pages
+├── jest.config.mjs      # Jest configuration (using ES module syntax)
+├── tsconfig.json        # TypeScript configuration (single tsconfig for the project)
+└── package.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Features & Design
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Key Functionalities
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- **No-Code Rule Builder**: Drag-and-drop interface for strategy creation
+- **Mock Simulation Engine**: Demo historical backtesting
+- **Responsive Pricing Page**: Optimized for mobile/desktop
+
+### UI/UX Highlights
+
+- **Professional Color Scheme**: Navy (#1A365D), Gold (#D4AF37)
+- **Consistent Styling**: Normalize.css integration
+- **Responsive Patterns**:
+  - Pricing page: Flexbox + media queries
+  - Strategy Builder: Desktop-first design
+
+## Assumptions
+
+- Backend APIs mocked using local JSON data
+- Simulation results show static demo data
+- Mobile responsiveness limited to Pricing page (time constraints)
+- Authentication not implemented
+
+## Future Scope
+
+- Real market data integration (Alpha Vantage API)
+- Advanced simulation algorithms (TA-Lib integration)
+- CI/CD pipeline (GitHub Actions)
+- Global state management (Redux Toolkit)
+
+## Technologies Used
+
+- React 18 + TypeScript 5
+- Vite 4
+- Jest 29 + Testing Library
+- React Router 6
+- Normalize.css 8
+
+## Running the Application
+
+```bash
+npm run dev
+```
+
+Access at: `http://localhost:5173`
+
+## Running Tests
+
+```bash
+npm test
+```
+
+## Demo
+
+[Strategy Builder](/screenshots/strategy-builder.png) |
+[Simulation Dashboard](/screenshots/simulation.png)
+
+## Contact
+
+**Abhishek Bansal**  
+📞 +91 7888757406  
+📧 abhishekbansal503@gmail.com
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+```
+
 ```

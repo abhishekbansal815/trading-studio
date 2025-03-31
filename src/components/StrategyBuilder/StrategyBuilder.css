@@ -1,0 +1,86 @@
+/* Container to center the component and provide a contrasting background */
+.strategy-builder-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: #f0f2f5; /* Light gray-blue background for contrast */
+  min-height: 100vh;
+}
+
+/* Main Strategy Builder box styling */
+.strategy-builder {
+  width: 80%;
+  max-width: 800px;
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  margin: auto;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #333; /* Dark text for readability */
+}
+
+/* Heading styling */
+.strategy-builder h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a237e; /* Dark navy blue */
+}
+
+/* Container for criteria sections */
+.criteria-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Common styling for criteria sections */
+.criteria-section {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #e9f2ff; /* Slightly more pronounced light blue */
+  color: #333;
+}
+
+/* Distinct styling for sell criteria */
+.sell-criteria {
+  background-color: #ffe9eb; /* Light red/pink for differentiation */
+}
+
+.criteria-section h3 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Save button styling */
+.save-strategy {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.save-strategy:hover {
+  background-color: #0056b3;
+}
